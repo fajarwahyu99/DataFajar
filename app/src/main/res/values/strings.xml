@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Cari Film Basis</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail_movie">Detail Catalogue Movie</string>
+    <string name="open_navigation_drawer">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+    <string name="nav_cari_film">Search</string>
+    <string name="descbackdrop">Image backdrop</string>
+    <string name="successsnackbar">Save favorite</string>
+    <string name="deletesnackbar">Favorite deleted</string>
+    <string name="appwidget">Your Favorite Movie</string>
+    <string name="addwidget">Add Widget</string>
+    <string name="detail_image">Title Image</string>
+    <string name="hint_carifilm">Wanna Search Movie?&#8230;</string>
+    <string name="error_load_message">Result not Found!</string>
+    <string name="overview">Film tentang fiksi yang sangat menarik</string>
+    <string name="error_kosong">Field cannot be empty</string>
+    <string name="pesan_error">Replace with your own action</string>
+    <string name="detail_btn">Detail</string>
+    <string name="share_btn">Share</string>
+    <string name="search_btn">Search</string>
+    <string name="tv_overview">Overview</string>
+    <string name="tv_release_date">Release date</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_favorite">Favorites</string>
+    <string name="nav_nowplaying">Now Playing</string>
+    <string name="nav_upcoming">Upcoming</string>
+    <string name="nav_setting">Settings</string>
+    <string name="nav_communicate">Communicate</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_send">Send</string>
+    <string-array name="nav_titleactivity">
+        <item>Home</item>
+        <item>Search</item>
+        <item>Favorite</item>
+    </string-array>
+    <string name="setting_titleactivity">Settings</string>
+    <string name="setting_notification">Notification</string>
+    <string name="dailyreminder_notification">Daily Reminder</string>
+    <string name="dailyreminder_turn_onoff">Turn on/off daily reminder</string>
+    <string name="upcomingreminder_notification">Upcoming Reminder</string>
+    <string name="upcomingreminder_turn_onoff">Turn on/off upcoming reminder</string>
+    <string name="settings">Settings</string>
+    <string name="locale">Setting Locale</string>
+    <string name="localization">Change Your Phone Localization</string>
+    <string name="setupupcoming">Upcoming Task Set Up</string>
+    <string name="cancelupcoming">Upcoming Task Cancel</string>
+    <string name="setupdaily">DailyReminder Set Up</string>
+    <string name="canceldaily">Repeating Alarm Cancel</string>
+    <string name="notifdaily">Cari Film is missing you SO MUCH&#8230;</string>
+    <string name="blank">Hello blank fragment</string>
+    <string name="empty_data">DATA EMPTY Please Select Your Favorite Movie</string>
+</resources>

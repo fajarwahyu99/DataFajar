@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.infolabsolution.dicodingdatafajar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission
+        android:name="com.example.infolabsolution.dicodingdatafajar.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.example.infolabsolution.dicodingdatafajar.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.infolabsolution.dicodingdatafajar.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.infolabsolution.dicodingdatafajar.DetailMovieActivity"
+            android:label="@string/title_activity_detail_movie"
+            android:parentActivityName="com.example.infolabsolution.dicodingdatafajar.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.infolabsolution.dicodingdatafajar.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.example.infolabsolution.dicodingdatafajar.DailyReminderMovie"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name="com.example.infolabsolution.dicodingdatafajar.MovieProvider"
+            android:authorities="basisdata.film"
+            android:exported="true"
+            android:readPermission="com.example.infolabsolution.dicodingdatafajar.READ_DATABASE"
+            android:writePermission="com.example.infolabsolution.dicodingdatafajar.WRITE_DATABASE" />
+
+        <service
+            android:name="com.example.infolabsolution.dicodingdatafajar.UpComingReminderMovie"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.example.infolabsolution.dicodingdatafajar.SettingActivity"
+            android:label="@string/setting_titleactivity"
+            android:parentActivityName="com.example.infolabsolution.dicodingdatafajar.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.infolabsolution.dicodingdatafajar.MainActivity" />
+        </activity>
+
+        <receiver android:name="com.example.infolabsolution.dicodingdatafajar.FavoriteWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_widget_info" />
+        </receiver>
+
+        <service android:name="com.example.infolabsolution.dicodingdatafajar.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+    </application>
+
+</manifest>
